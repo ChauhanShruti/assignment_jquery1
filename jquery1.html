@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+	</script>
+
+
+	<script type="text/javascript">
+	
+
+$(document).ready(function(){
+
+	$("#bt1").click(function(){
+		 $("div").children("h1").css({"backgroundColor": "red"});
+	});
+
+	$("#bt2").click(function(){
+		 $("input").hide();
+	});
+
+	$("#bt3").click(function(){
+       $('li').each(function( index, element ) {
+    			$( element ).prepend( '<b>' + index + '</b>' );
+    			
+				});
+   });
+
+    $("#bt4").click(function(){
+  			$("#an").attr("href", "https://www.acadgild.com");
+  			$("#an").text("acadgild");
+  		});
+
+});
+
+</script>
+
+
+
+</head>
+<body>
+<h1>abc</h1>
+<div>
+<h1>div-1</h1>
+<h1>div-2</h1>
+</div>
+<h1>xyz</h1>
+<button id="bt1">click here to change background-colour of h1 in div</button>
+
+<br><br><br><br><br><br>
+
+<form name='demo_form' id="f">
+First name: <input type="text" name="fname"><br>
+Last name: <input type="text" name="lname"><br>
+<input type="submit" value="Submit">
+</form> <br>
+<button id="bt2">click here to hide all input elements</button>
+
+<br><br><br><br><br><br>
+
+<ul>
+<li>Html Tutorial</li>
+<li>Mongodb Tutorial</li>
+<li>Python Tutorial</li>
+</ul>
+<button id="bt3">click here to add tag before list items</button>
+
+<br><br><br><br><br><br>
+
+<a href="https://www.google.co.in/" id="an">google</a> <br>
+<button id="bt4">click here to change href and text of avove link</button>
+
+</body>
+</html>
